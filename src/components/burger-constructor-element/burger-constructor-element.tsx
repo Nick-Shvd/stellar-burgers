@@ -8,11 +8,17 @@ export const BurgerConstructorElement: FC<BurgerConstructorElementProps> = memo(
   ({ ingredient, index, totalItems }) => {
     const dispatch = useDispatch();
 
-    const handleMoveDown = () => {dispatch(burgerConstrucorSlice.actions.productDoww(index))};
+    const handleMoveDown = () => {
+      dispatch(burgerConstrucorSlice.actions.productDoww(index));
+    };
 
-    const handleMoveUp = () => {dispatch(burgerConstrucorSlice.actions.productUp(index))};
+    const handleMoveUp = () => {
+      dispatch(burgerConstrucorSlice.actions.productUp(index));
+    };
 
-    const handleClose = () => {dispatch(burgerConstrucorSlice.actions.removeProduct(ingredient.id))};
+    const handleClose = () => {
+      dispatch(burgerConstrucorSlice.actions.removeProduct(ingredient.id));
+    };
 
     return (
       <BurgerConstructorElementUI

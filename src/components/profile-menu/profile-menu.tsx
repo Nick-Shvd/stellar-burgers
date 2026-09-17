@@ -9,7 +9,8 @@ export const ProfileMenu: FC = () => {
   const { pathname } = useLocation();
   const dispatch = useDispatch();
 
-  const handleLogout = () => {dispatch(logoutUser());
+  const handleLogout = () => {
+    dispatch(logoutUser());
     dispatch(burgerConstrucorSlice.actions.resetConstructor());
   };
 

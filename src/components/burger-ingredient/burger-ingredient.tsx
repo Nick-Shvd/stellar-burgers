@@ -8,11 +8,11 @@ import { burgerConstrucorSlice } from '../../services/burger-constructor-slice';
 
 export const BurgerIngredient: FC<TBurgerIngredientProps> = memo(
   ({ ingredient, count }) => {
-
     const dispatch = useDispatch();
     const location = useLocation();
 
-    const handleAdd = () => dispatch(burgerConstrucorSlice.actions.addProduct(ingredient));
+    const handleAdd = () =>
+      dispatch(burgerConstrucorSlice.actions.addProduct(ingredient));
 
     return (
       <BurgerIngredientUI

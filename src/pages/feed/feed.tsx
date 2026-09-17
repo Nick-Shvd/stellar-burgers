@@ -11,9 +11,9 @@ export const Feed: FC = () => {
   /** TODO: взять переменную из стора */
   const dispatch = useDispatch();
 
-  useEffect( ()=> {
+  useEffect(() => {
     dispatch(getFeedsFromApi());
-  }, [])//первоначальная загрузка (1 раз)
+  }, []); //первоначальная загрузка (1 раз)
 
   const orders: TOrder[] = useSelector(orderSlice.selectors.selectFeeds);
 
@@ -21,5 +21,12 @@ export const Feed: FC = () => {
     return <Preloader />;
   }
 
-  return <FeedUI orders={orders} handleGetFeeds={ () => {dispatch(getFeedsFromApi())}} />;
+  return (
+    <FeedUI
+      orders={orders}
+      handleGetFeeds={() => {
+        dispatch(getFeedsFromApi());
+      }}
+    />
+  );
 };
