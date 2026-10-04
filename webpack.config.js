@@ -86,6 +86,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
+    host: '127.0.0.1',
     static: path.join(__dirname, './dist'),
     compress: true,
     historyApiFallback: true,
