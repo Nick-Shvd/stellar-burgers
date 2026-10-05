@@ -37,7 +37,7 @@ test.describe("тест с HAR данными для ингредиентов и
         await page.getByTestId('ingredientElement')
         .filter({hasText: 'Краторная булка N-200i'}).click();
         
-        await expect(page.getByTestId('modalWindow')).toBeVisible();
+        await expect(page.getByTestId('modalWindow')).toContainText('Краторная булка N-200i');
     })
 
     test('закрытие модалки крестиком', async({page}) => {
